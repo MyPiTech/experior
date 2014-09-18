@@ -2,7 +2,7 @@
  * Copyright (c) 2014. Shawn Wheeler. All rights reserved.
  */
 
-package testproject.managedbean;
+package com.mypitech.experior.jsf2.managedbean;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;

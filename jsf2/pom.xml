@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jsf2-test</artifactId>
+    <artifactId>jsf2</artifactId>
     <packaging>war</packaging>
     <dependencies>
         <!-- JSF -->
@@ -54,7 +54,8 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>jsf2-test</finalName>
+        <finalName>jsf2</finalName>
         <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
     </build>
 </project>
