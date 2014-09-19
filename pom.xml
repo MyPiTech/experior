@@ -10,6 +10,8 @@
     <modules>
         <module>jsf2</module>
         <module>jersey</module>
+        <module>struts2</module>
+        <module>domain</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -107,8 +109,6 @@
                 <version>2.4</version>
             </dependency>
 
-
-
             <!-- JSF -->
             <dependency>
                 <groupId>com.sun.faces</groupId>
@@ -175,8 +175,12 @@
                 <version>1.2</version>
             </dependency>
 
-
-
+            <!-- Local -->
+            <dependency>
+                <groupId>com.mypitech.experior</groupId>
+                <artifactId>domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>

@@ -1,17 +1,24 @@
-package com.mypitech.experior.jersey2.service;
+/*
+ * Copyright (c) 2014. Shawn Wheeler. All rights reserved.
+ */
 
+package com.mypitech.experior.struts2.service;
 
 import com.mypitech.experior.domain.bean.UserBean;
 import com.mypitech.experior.domain.dao.IUserDao;
+import org.apache.log4j.Logger;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import java.util.List;
 
 /**
- * Created by Shawn Wheeler on 9/13/2014.
+ * Created by Shawn Wheeler on 9/2/2014.
  */
 @Stateless
 public class UserService {
+
+    private final static Logger LOGGER = Logger.getLogger(UserService.class.getName());
 
     @Inject
     private IUserDao userDao;
@@ -31,4 +38,9 @@ public class UserService {
     public void delete(String identity){
         userDao.delete(identity);
     }
+
+    public List<UserBean> all(){
+        return userDao.all();
+    }
+
 }

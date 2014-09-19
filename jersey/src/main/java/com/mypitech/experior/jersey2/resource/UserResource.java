@@ -1,9 +1,9 @@
 package com.mypitech.experior.jersey2.resource;
 
-import com.mypitech.experior.jersey2.bean.UserBean;
+
+import com.mypitech.experior.domain.bean.UserBean;
 import com.mypitech.experior.jersey2.service.UserService;
 import org.apache.log4j.Logger;
-
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;

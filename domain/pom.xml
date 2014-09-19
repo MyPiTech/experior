@@ -8,26 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jersey</artifactId>
-    <packaging>war</packaging>
+    <artifactId>domain</artifactId>
+    <packaging>jar</packaging>
     <dependencies>
-        <!-- Jackson -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.jaxrs</groupId>
-            <artifactId>jackson-jaxrs-json-provider</artifactId>
-            <scope>compile</scope>
-        </dependency>
-
         <!-- ORM  -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -50,6 +33,13 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- Mapping  -->
+        <dependency>
+            <groupId>ma.glasnost.orika</groupId>
+            <artifactId>orika-core</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
         <!-- Time -->
         <dependency>
             <groupId>joda-time</groupId>
@@ -57,24 +47,10 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Mapping  -->
-        <dependency>
-            <groupId>ma.glasnost.orika</groupId>
-            <artifactId>orika-core</artifactId>
-
-        </dependency>
-
-        <!-- Local -->
-        <dependency>
-            <groupId>com.mypitech.experior</groupId>
-            <artifactId>domain</artifactId>
-            <scope>compile</scope>
-        </dependency>
 
     </dependencies>
     <build>
-        <finalName>jersey</finalName>
+        <finalName>domain</finalName>
         <sourceDirectory>src/main/java</sourceDirectory>
-        <testSourceDirectory>src/test/java</testSourceDirectory>
     </build>
 </project>
