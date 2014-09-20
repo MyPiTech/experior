@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="application">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SMBNexus</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <script type="text/javascript" src="js/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular/app/application.js"></script>
+    <script type="text/javascript" src="js/angular/app/navigation.js"></script>
+</head>
+<body>
+    <div id="container" ng-controller="PageController as page">
+        <main-header></main-header>
+        <top-nav></top-nav>
+        <div id="body" class="width">
+            <main-content></main-content>
+            <main-sidebar></main-sidebar>
+        </div>
+        <main-footer></main-footer>
+    </div>
+</body>
+</html>

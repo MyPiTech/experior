@@ -12,6 +12,7 @@
         <module>jersey</module>
         <module>struts2</module>
         <module>domain</module>
+        <module>angularjs</module>
     </modules>
     <dependencyManagement>
         <dependencies>

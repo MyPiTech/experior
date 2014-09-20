@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright (c) 2014. Shawn Wheeler. All rights reserved.
+  -->
+
+<html ng-app="ui">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular/app/application.js"></script>
+</head>
+<body class="container" ng-controller="UserController as controller">
+    <!--<div>{{2+3}}</div>-->
+    <div ng-repeat="user in controller.users">
+        <h3>
+             {{user.name}}
+        </h3>
+    </div>
+
+</body>
+</html>
+
+<!-- // Copyright (c) 2014 Shawn Wheeler All rights reserved.// -->
