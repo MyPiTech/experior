@@ -8,13 +8,88 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<s:url action="hello" var="helloURL"/>
+<s:url action="listUsers" var="crud"/>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Hello World!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Struts 2 Simple Application</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
-
 <body>
-<h2><s:property value="messageStore.message"/></h2>
+<div id="container">
+    <header>
+        <div class="width">
+            <h1><a href="index.jsp">Struts 2 Example Application</a></h1>
+        </div>
+    </header>
+    <nav>
+        <div class="width">
+            <ul>
+                <li class="start"><a href="index.jsp">Home</a></li>
+                <li class="selected"><a href="<s:property value="#helloURL"/>">Hello World</a></li>
+                <li class="end"><a href="<s:property value="#crud"/>">CRUD</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="body" class="width">
+        <section id="content">
+            <article>
+                <h2><s:property value="messageStore.message"/></h2><br>
+                <a href="<s:property value="#helloURL"/>">Say hello again?</a>
+            </article>
+        </section>
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.jsp">Home Page</a></li>
+                        <li><a href="<s:property value="#helloURL"/>">Hello World!</a></li>
+                        <li><a href="<s:property value="#crud"/>">Basic CRUD Example</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </aside>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        <div class="footer-content width">
+            <ul>
+                <li><h4>Pages</h4></li>
+                <li><a href="index.jsp">Home Page</a></li>
+                <li><a href="<s:property value="#helloURL"/>">Hello World!</a></li>
+                <li><a href="<s:property value="#crud"/>">Basic CRUD Example</a></li>
+            </ul>
+
+            <ul>
+                <li><h4>Test Sites</h4></li>
+                <li><a href="#">Angular JS & REST API</a></li>
+                <li><a href="#">Wicket 6</a></li>
+                <li><a href="#">JSF 2</a></li>
+            </ul>
+
+            <ul class="endfooter">
+                <li><h4>Code Repositories</h4></li>
+                <li><a href="https://github.com/MyPiTech/experior/tree/master/struts2" target="_blank">Struts 2</a></li>
+                <li><a href="#">Angular JS</a></li>
+                <li><a href="#">REST API</a></li>
+                <li><a href="#">Wicket 6</a></li>
+                <li><a href="#">JSF 2</a></li>
+            </ul>
+
+            <div class="clear"></div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; MyPiTech 2014 - <a href="http://zypopwebtemplates.com/" target="_blank">Free CSS Website Templates</a> by ZyPOP</p>
+        </div>
+    </footer>
+</div>
 </body>
 </html>

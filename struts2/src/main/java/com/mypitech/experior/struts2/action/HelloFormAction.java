@@ -15,7 +15,7 @@ import org.apache.struts2.convention.annotation.Result;
 @Namespace("/")
 @Action("hello")
 @Result(name = "success", location = "/helloWorldForm.jsp")
-public class BasicNavigationAction extends ActionSupport {
+public class HelloFormAction extends ActionSupport {
     //@Action(value = "hello", results = {@Result(name = "success", location = "/helloWorldForm.jsp")})
     public String helloAction() {
         return SUCCESS;
