@@ -24,7 +24,7 @@
 <div id="container">
     <header>
         <div class="width">
-            <h1><a href="index.jsp">Struts 2 Example Application</a></h1>
+            <h1><a href="index.jsp">Struts 2 Simple Application</a></h1>
         </div>
     </header>
     <nav>
@@ -40,7 +40,7 @@
         <section id="content">
             <article>
                 <h2><s:property value="messageStore.message"/></h2><br>
-                <a href="<s:property value="#helloURL"/>">Say hello again?</a>
+                <a class="button" href="<s:property value="#helloURL"/>">Say hello again?</a>
             </article>
         </section>
         <aside class="sidebar">
@@ -69,7 +69,7 @@
             </ul>
 
             <ul>
-                <li><h4>Test Sites</h4></li>
+                <li><h4>Test Applications</h4></li>
                 <li><a href="#">Angular JS & REST API</a></li>
                 <li><a href="#">Wicket 6</a></li>
                 <li><a href="#">JSF 2</a></li>

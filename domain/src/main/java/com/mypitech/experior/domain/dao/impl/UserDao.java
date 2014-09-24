@@ -38,12 +38,12 @@ public class UserDao implements IUserDao {
     }
 
     @Override
-    public void create(UserBean user) {
+    public String create(UserBean user) {
         UserEntity entity = new UserEntity();
         entity.setName(user.getName());
         entity.setDescription(user.getDescription());
         entityManager.persist(entity);
-        //entityManager.persist(mapper.map(user, UserEntity.class));
+        return entity.getIdentity();
     }
 
     @Override

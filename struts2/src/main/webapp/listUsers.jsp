@@ -25,7 +25,7 @@
 <div id="container">
     <header>
         <div class="width">
-            <h1><a href="index.jsp">Struts 2 Example Application</a></h1>
+            <h1><a href="index.jsp">Struts 2 Simple Application</a></h1>
         </div>
     </header>
     <nav>
@@ -42,7 +42,7 @@
             <article>
                 <h2>User List</h2>
                 <s:url action="updateUser" var="createUser"/>
-                <a href="<s:property value="#createUser" />">Create New User</a><br>
+                <a class="button" style="margin-top:10px;" href="<s:property value="#createUser" />">Create New User</a><br>
                 <display:table id="userTable" name="users" cellpadding="5px;" cellspacing="5px;"
                                style="margin-top:20px;" requestURI="">
                     <display:column property="name" title="Name"/>
@@ -88,7 +88,7 @@
             </ul>
 
             <ul>
-                <li><h4>Test Sites</h4></li>
+                <li><h4>Test Applications</h4></li>
                 <li><a href="#">Angular JS & REST API</a></li>
                 <li><a href="#">Wicket 6</a></li>
                 <li><a href="#">JSF 2</a></li>

@@ -11,7 +11,7 @@ public interface IUserDao {
     final static String GET_ALL = "UserEntity.all";
 
     UserBean read(String identity);
-    void create(UserBean user);
+    String create(UserBean user);
     void update(String identity, UserBean user);
     void delete(String identity);
     List<UserBean> all();

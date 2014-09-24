@@ -66,8 +66,19 @@ public class UserResource {
     @Path("create")
     public Response create(UserBean user) {
         try {
-            service.create(user);
-            return Response.accepted().build();
+            return Response.accepted(service.create(user)).build();
+        } catch (Exception e) {
+            LOGGER.error(e);
+            return Response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
+        }
+    }
+
+    @GET
+    @Produces({"application/json"})
+    @Path("all")
+    public Response all() {
+        try {
+            return Response.ok(service.all()).build();
         } catch (Exception e) {
             LOGGER.error(e);
             return Response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();

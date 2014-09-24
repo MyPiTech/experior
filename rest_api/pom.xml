@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jersey</artifactId>
+    <artifactId>rest_api</artifactId>
     <packaging>war</packaging>
     <dependencies>
         <!-- Jackson -->
@@ -73,7 +73,7 @@
 
     </dependencies>
     <build>
-        <finalName>jersey</finalName>
+        <finalName>rest-api</finalName>
         <sourceDirectory>src/main/java</sourceDirectory>
         <testSourceDirectory>src/test/java</testSourceDirectory>
     </build>

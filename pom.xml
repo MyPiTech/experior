@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>jsf2</module>
-        <module>jersey</module>
+        <module>rest_api</module>
         <module>struts2</module>
         <module>domain</module>
         <module>angularjs</module>

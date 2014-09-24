@@ -25,7 +25,7 @@
 <div id="container">
     <header>
         <div class="width">
-            <h1><a href="index.jsp">Struts 2 Example Application</a></h1>
+            <h1><a href="index.jsp">Struts 2 Simple Application</a></h1>
         </div>
     </header>
     <nav>
@@ -47,7 +47,7 @@
                     <h2>Update User</h2>
                 </s:else>
                 <s:url action="listUsers" var="listClientsURL"/>
-                <a href="<s:property value="#listClientsURL" />">Return To User List</a><br>
+                <a class="button" style="margin-bottom:20px;margin-top:10px;" href="<s:property value="#listClientsURL" />">Return To User List</a><br>
                 <s:form action="userSubmitted">
                     <s:hidden name="user.identity"/>
                     <s:textfield name="user.name" label="Name"/>
@@ -90,7 +90,7 @@
             </ul>
 
             <ul>
-                <li><h4>Test Sites</h4></li>
+                <li><h4>Test Applications</h4></li>
                 <li><a href="#">Angular JS & REST API</a></li>
                 <li><a href="#">Wicket 6</a></li>
                 <li><a href="#">JSF 2</a></li>

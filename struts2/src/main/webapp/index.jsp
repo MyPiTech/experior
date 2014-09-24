@@ -24,7 +24,7 @@
 <div id="container">
     <header>
         <div class="width">
-            <h1><a href="index.jsp">Struts 2 Example Application</a></h1>
+            <h1><a href="index.jsp">Struts 2 Simple Application</a></h1>
         </div>
     </header>
     <nav>
@@ -39,8 +39,8 @@
     <div id="body" class="width">
         <section id="content">
             <article>
-                <h2>Welcome to Struts 2</h2>
-                <p>This site is a Struts 2 proof of concept. It includes a 'hello world', and basic CRUD logic. Check out the source code, or other test projects by clicking on the links below. Thanks for visiting!</p>
+                <h2>Struts 2 Simple Application</h2>
+                <p>This application is a Struts 2 proof of concept. It includes a 'hello world', and basic CRUD logic. Check out the source code, or other test projects by clicking on the links below. Thanks for visiting!</p>
             </article>
         </section>
         <aside class="sidebar">
@@ -69,7 +69,7 @@
             </ul>
 
             <ul>
-                <li><h4>Test Sites</h4></li>
+                <li><h4>Test Applications</h4></li>
                 <li><a href="#">Angular JS & REST API</a></li>
                 <li><a href="#">Wicket 6</a></li>
                 <li><a href="#">JSF 2</a></li>

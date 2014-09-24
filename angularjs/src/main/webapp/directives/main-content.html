@@ -5,92 +5,83 @@
 <section id="content">
     <div id="home" ng-show="page.isPage('home')">
         <article>
-            <h2>Introduction to SMB Nexus </h2>
-            <p>Welcome to SMB Nexus. This is your one stop shop for all your small to medium sized business software needs. We provide a suite of APIs (Application Programming Interfaces) to meet nearly every business need. With new APIs being developed all the time. Chances are if we don't have it, we soon will. Check out our list of current and up coming APIs, <a href="#">here</a>.</p>
-            <p>We decided to take an API approach to our software development for a number of reasons. Not the least of which is scalability and versatility. APIs allow for nearly any 'front-end' or 'user experience' to be developed, using nearly any technology. Whether you want your application to run on Windows, Macintosh's OS X, Linux, the web, iOS, Android, or even two or more of them. An API can provide the business logic your app needs. Since your user experience is up to you branding is never a problem, nor is mixing and matching APIs to build the perfect application that meets your business needs, without investing in functionality you don't need.</p>
-            <p>The API approach allows for small businesses to get started with the software they need for a fraction of the cost other business software providers demand. With a little technical know-how, you can build your own application and subscribe to one of our APIs for less than $30.00 dollars a month. Don't have the tech skills or know someone that does? We can provide you with everything from tutorials to a generic low cost front-end, or even a fully custom and branded front-end developed by our expert development team.</p>
-            <!-- <a href="#" class="button">Read more</a>
-            <a href="#" class="button">Comments</a>-->
+            <h2>AngularJS/REST API Simple Application</h2>
+            <p>This application is a AngularJS/REST API proof of concept. It includes a 'hello world', and basic CRUD logic. Check out the source code, or other test projects by clicking on the links below. Thanks for visiting!</p>
         </article>
-        <!--<article class="expanded">
-            <h2>Buy unbranded</h2>
-            <div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
-            <p>Purchasing a template license for 8.00 GBP (at time of writing around 12 USD) gives you the right to remove any branding including links, logos and source tags relating to ZyPOP. As well as waiving the attribution requirement, your payment will also help us provide continued support for users as well as creating new web templates. Find out more about how to buy at the licensing page on our website which can be accessed at <a href="http://zypopwebtemplates.com/licensing" title="template license">http://zypopwebtemplates.com/licensing</a></p>
-            <h3>Lorem lipsum</h3>
-            <p>Morbi fermentum condimentum felis, commodo vestibulum sem mattis sed. Aliquam magna ante, mollis vitae tincidunt in, malesuada vitae turpis. Sed aliquam libero ut velit bibendum consectetur. Quisque sagittis, est in laoreet semper, enim dui consequat felis, faucibus ornare urna velit nec leo. Maecenas condimentum velit vitae est lobortis fermentum. In tristique sem vitae metus ornare luctus tempus nisl volutpat. Integer et est id nisi tempus pharetra sagittis et libero.</p>
-            <a href="#" class="button">Read more</a>
-            <a href="#" class="button">Comments</a>
-        </article>-->
     </div>
-    <div id="examples" ng-show="page.isPage('examples')">
-        <article>
-            <h2>Examples</h2>
-            <h1>Heading H1</h1>
-            <h2>Heading H2</h2>
-            <h3>Heading H3</h3>
-            <h4>Heading H4</h4>
-            <h5>Heading H5</h5>
-            <p>&nbsp;</p>
-            <h3>Lists</h3>
-            <ul>
-                <li>List item</li>
-                <li>List item</li>
-                <li>List item</li>
-            </ul>
-            <ol>
-                <li>List item</li>
-                <li>List item</li>
-                <li>List item</li>
-            </ol>
-            <ul class="styledlist">
-                <li>Firefox</li>
-                <li>IE</li>
-                <li>Safari</li>
-                <li>Chrome</li>
-            </ul>
-            <p>&nbsp;</p>
-            <h3>Code and blockquote</h3>
-            <code>&lt;? echo('Hello world'); ?&gt;</code>
-            <blockquote><p>Mauris sit amet tortor in urna tincidunt aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p></blockquote>
-            <p>&nbsp;</p>
-            <h3>Table</h3>
-            <table cellspacing="0">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>John Smith</td>
-                    <td>28</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Fred James</td>
-                    <td>49</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Rachel Johnson</td>
-                    <td>19</td>
-                </tr>
-            </table>
-            <p>&nbsp;</p>
-            <h3>Form</h3>
-            <fieldset>
-                <legend>Form legend</legend>
-                <form action="#" method="get">
-                    <p><label for="name">Name:</label>
-                        <input name="name" id="name" value="" type="text" /></p>
-                    <p><label for="email">Email:</label>
-                        <input name="email" id="email" value="" type="text" /></p>
-
-                    <p><label for="message">Message:</label>
-                        <textarea cols="37" rows="11" name="message" id="message"></textarea></p>
-                    <p><input name="send" style="margin-left: 150px;" class="formbutton" value="Send" type="submit" /></p>
+    <div id="hello" ng-show="page.isPage('hello')" ng-controller="SubPageController as formPageCtrl">
+        <article ng-controller="HelloFormController as formCtrl">
+            <div ng-show="formPageCtrl.isPage('1')">
+                <form>
+                    <table>
+                        <tr>
+                            <td><label for="nameInput" class="label">Name:</label></td>
+                            <td><input type="text" ng-model="formCtrl.message" value="" id="nameInput"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div align="right"><input type="submit" id="helloSubmit" value="Submit" ng-click="formPageCtrl.setPage('2')"/> </div>
+                            </td>
+                        </tr>
+                    </table>
                 </form>
-            </fieldset>
+            </div>
+            <div ng-show="formPageCtrl.isPage('2')">
+                <h2>Hello world, {{formCtrl.message}}!</h2><br>
+                <a class="button" href="#" ng-click="formPageCtrl.setPage('1'); formCtrl.clearMessage();">Say hello again?</a>
+            </div>
+        </article>
+    </div>
+    <div id="crud" ng-show="page.isPage('crud')" ng-controller="SubPageController as crudPageCtrl">
+        <article ng-controller="UserController as userCtrl">
+            <div ng-show="crudPageCtrl.isPage('1')">
+                <h2>User List</h2>
+                <a class="button" style="margin-top:10px;" href="#"  ng-click="crudPageCtrl.setPage('2');">Create New User</a><br>
+                <table cellspacing="5px;" style="margin-top:20px;" id="userTable" cellpadding="5px;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="user in users">
+                        <td>{{user.name}}</td>
+                        <td>{{user.description}}</td>
+                        <td><a href="#" ng-click="initUpdateForm(user); crudPageCtrl.setPage('2');">Update</a></td>
+                        <td><a href="#" ng-click="deleteUser(user)">Delete</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-show="crudPageCtrl.isPage('2')">
+                <h2 ng-show="isNewUser()">Create User</h2>
+                <h2 ng-show="!isNewUser()">Update User</h2>
+                <a class="button" style="margin-bottom:20px;margin-top:10px;" href="#" ng-click="clearForm(); crudPageCtrl.setPage('1');">Return To User List</a><br>
+                <form>
+                    <input type="hidden" ng-model="form.user.identity" value="" id="userSubmitted_user_identity"/>
+                    <table>
+                        <tr>
+                            <td><label for="name" class="label">Name:</label></td>
+                            <td><input type="text" ng-model="form.user.name" id="name" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="desc" class="label">Description:</label></td>
+                            <td><textarea ng-model="form.user.description" cols="30" rows="3" id="desc"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div align="right">
+                                    <input ng-show="isNewUser()" type="submit" ng-click="createUser(); crudPageCtrl.setPage('1');" value="Create"/>
+                                    <input ng-show="!isNewUser()" type="submit" ng-click="updateUser(); crudPageCtrl.setPage('1');" value="Update"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         </article>
     </div>
 </section>

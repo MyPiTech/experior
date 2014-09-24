@@ -1,16 +1,9 @@
-<%--
-  ~ Copyright (c) 2014. Shawn Wheeler. All rights reserved.
-  --%>
-
-<%--
-    Created by Shawn Wheeler on 9/01/2014.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<s:url action="hello" var="helloURL"/>
-<s:url action="listUsers" var="crud"/>
-<html>
+<html
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Struts 2 Simple Application</title>
@@ -20,29 +13,33 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
-<body>
+<h:body>
 <div id="container">
     <header>
         <div class="width">
-            <h1><a href="index.jsp">Struts 2 Simple Application</a></h1>
+            <h1><a href="index.jsp">Struts 2 Example Application</a></h1>
         </div>
     </header>
     <nav>
         <div class="width">
             <ul>
-                <li class="start"><a href="index.jsp">Home</a></li>
-                <li class="selected"><a href="<s:property value="#helloURL"/>">Hello World</a></li>
-                <li class="end"><a href="<s:property value="#crud"/>">CRUD</a></li>
+                <li class="start selected"><a href="#">Home</a></li>
+                <li class=""><a href="#">Hello World</a></li>
+                <li class="end"><a href="#">CRUD</a></li>
             </ul>
         </div>
     </nav>
     <div id="body" class="width">
         <section id="content">
             <article>
-                <s:form action="helloSubmitted">
-                    <s:textfield name="messageStore.message" label="Name"/>
-                    <s:submit />
-                </s:form>
+                <!--<h2>Welcome to Struts 2</h2>
+                <p>This site is a Struts 2 proof of concept. It includes a 'hello world', and basic CRUD logic. Check out the source code, or other test projects by clicking on the links below. Thanks for visiting!</p>-->
+                <h3>JSF 2.2 Hello World Example</h3>
+                <h:form>
+                    What's your name?
+                    <h:inputText value="#{helloBean.name}"></h:inputText>
+                    <h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
+                </h:form>
             </article>
         </section>
         <aside class="sidebar">
@@ -50,13 +47,14 @@
                 <li>
                     <h4>Pages</h4>
                     <ul>
-                        <li><a href="index.jsp">Home Page</a></li>
-                        <li><a href="<s:property value="#helloURL"/>">Hello World!</a></li>
-                        <li><a href="<s:property value="#crud"/>">Basic CRUD Example</a></li>
+                        <li><a href="#">Home Page</a></li>
+                        <li><a href="#">Hello World!</a></li>
+                        <li><a href="#">Basic CRUD Example</a></li>
                     </ul>
                 </li>
 
             </ul>
+
         </aside>
         <div class="clear"></div>
     </div>
@@ -64,13 +62,13 @@
         <div class="footer-content width">
             <ul>
                 <li><h4>Pages</h4></li>
-                <li><a href="index.jsp">Home Page</a></li>
-                <li><a href="<s:property value="#helloURL"/>">Hello World!</a></li>
-                <li><a href="<s:property value="#crud"/>">Basic CRUD Example</a></li>
+                <li><a href="#">Home Page</a></li>
+                <li><a href="#">Hello World!</a></li>
+                <li><a href="#">Basic CRUD Example</a></li>
             </ul>
 
             <ul>
-                <li><h4>Test Applications</h4></li>
+                <li><h4>Test Sites</h4></li>
                 <li><a href="#">Angular JS & REST API</a></li>
                 <li><a href="#">Wicket 6</a></li>
                 <li><a href="#">JSF 2</a></li>
@@ -92,8 +90,5 @@
         </div>
     </footer>
 </div>
-</body>
+</h:body>
 </html>
-
-
-
