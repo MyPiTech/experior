@@ -1,4 +1,4 @@
-package com.mypitech.experior.jersey2.service;
+package com.mypitech.experior.rest_api.service;
 
 
 import com.mypitech.experior.domain.bean.UserBean;

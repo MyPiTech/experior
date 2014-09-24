@@ -1,8 +1,8 @@
-package com.mypitech.experior.jersey2.resource;
+package com.mypitech.experior.rest_api.resource;
 
 
 import com.mypitech.experior.domain.bean.UserBean;
-import com.mypitech.experior.jersey2.service.UserService;
+import com.mypitech.experior.rest_api.service.UserService;
 import org.apache.log4j.Logger;
 
 import javax.ejb.Stateless;

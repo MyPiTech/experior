@@ -1,4 +1,4 @@
-package com.mypitech.experior.jersey2;
+package com.mypitech.experior.rest_api;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
