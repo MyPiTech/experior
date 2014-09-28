@@ -1,1 +1,0 @@
-<cfset Request["DSN"] = "mySQLExperior">
