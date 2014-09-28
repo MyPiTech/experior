@@ -25,23 +25,31 @@
         <div class="width">
             <ul>
                 <li class="start"><h:link value="Home" outcome="index"/></li>
-                <li class="selected"><h:link value="Hello World" outcome="hello"/></li>
-                <li class="end"><h:link value="CRUD" outcome="userList"/></li>
+                <li class=""><h:link value="Hello World" outcome="hello"/></li>
+                <li class="end selected"><h:link value="CRUD" outcome="userList"/></li>
             </ul>
         </div>
     </nav>
     <div id="body" class="width">
         <section id="content">
             <article>
+                <h2>#{userManager.headerText}</h2>
+                <h:link value="Return To User List" outcome="userList" class="button"/><br/>
                 <h:form>
                     <table>
                         <tr>
                             <td><label for="nameInput" class="label">Name:</label></td>
-                            <td><h:inputText value="#{helloBean.name}" id="nameInput"/></td>
+                            <td><h:inputText value="#{userManager.name}" id="nameInput"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="descInput" class="label">Description:</label></td>
+                            <td><h:inputTextarea cols="30" rows="3" value="#{userManager.description}" id="descInput"/></td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <div align="right"><h:commandButton value="Submit" action="welcome"/></div>
+                                <div align="right">
+                                    <h:commandButton value="#{userManager.buttonText}" action="#{userManager.createUser}"/>
+                                </div>
                             </td>
                         </tr>
                     </table>

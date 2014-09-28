@@ -25,27 +25,47 @@
         <div class="width">
             <ul>
                 <li class="start"><h:link value="Home" outcome="index"/></li>
-                <li class="selected"><h:link value="Hello World" outcome="hello"/></li>
-                <li class="end"><h:link value="CRUD" outcome="userList"/></li>
+                <li class=""><h:link value="Hello World" outcome="hello"/></li>
+                <li class="end selected"><h:link value="CRUD" outcome="userList"/></li>
             </ul>
         </div>
     </nav>
     <div id="body" class="width">
         <section id="content">
             <article>
+                <h2>User List</h2>
                 <h:form>
-                    <table>
-                        <tr>
-                            <td><label for="nameInput" class="label">Name:</label></td>
-                            <td><h:inputText value="#{helloBean.name}" id="nameInput"/></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <div align="right"><h:commandButton value="Submit" action="welcome"/></div>
-                            </td>
-                        </tr>
-                    </table>
+                    <h:commandLink action="#{userManager.newUser}" class="button" value="Create New User"/>
                 </h:form>
+                <br/>
+                <table cellspacing="5px;" style="margin-top:20px;" id="userTable" cellpadding="5px;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <ui:repeat var="user" value="#{userManager.users}">
+                    <tr>
+                        <td>#{user.name}</td>
+                        <td>#{user.description}</td>
+                        <td>
+                            <h:form>
+                                <h:commandLink action="#{userManager.updateUser(user.identity)}" value="Update"/>
+                            </h:form>
+                        </td>
+                        <td>
+                            <h:form>
+                                <h:commandLink action="#{userManager.deleteUser(user.identity)}" value="Delete"/>
+                            </h:form>
+                        </td>
+                    </tr>
+                    </ui:repeat>
+                    </tbody>
+                </table>
             </article>
         </section>
         <aside class="sidebar">

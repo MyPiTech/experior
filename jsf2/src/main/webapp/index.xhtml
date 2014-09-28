@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html
+      xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Struts 2 Simple Application</title>
+    <title>JSF 2 Simple Application</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,29 +18,29 @@
 <div id="container">
     <header>
         <div class="width">
-            <h1><a href="index.jsp">Struts 2 Example Application</a></h1>
+            <h1><h:link value="JSF 2 Simple Application" outcome="index"/></h1>
         </div>
     </header>
     <nav>
         <div class="width">
             <ul>
-                <li class="start selected"><a href="#">Home</a></li>
-                <li class=""><a href="#">Hello World</a></li>
-                <li class="end"><a href="#">CRUD</a></li>
+                <li class="start selected"><h:link value="Home" outcome="index"/></li>
+                <li class=""><h:link value="Hello World" outcome="hello"/></li>
+                <li class="end"><h:link value="CRUD" outcome="userList"/></li>
             </ul>
         </div>
     </nav>
     <div id="body" class="width">
         <section id="content">
             <article>
-                <!--<h2>Welcome to Struts 2</h2>
-                <p>This site is a Struts 2 proof of concept. It includes a 'hello world', and basic CRUD logic. Check out the source code, or other test projects by clicking on the links below. Thanks for visiting!</p>-->
-                <h3>JSF 2.2 Hello World Example</h3>
+                <h2>JSF 2 Simple Application</h2>
+                <p>This application is a JSF 2 proof of concept. It includes a 'hello world', and basic CRUD logic. Check out the source code, or other test projects by clicking on the links below. Thanks for visiting!</p>
+                <!--<h3>JSF 2.2 Hello World Example</h3>
                 <h:form>
                     What's your name?
                     <h:inputText value="#{helloBean.name}"></h:inputText>
                     <h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
-                </h:form>
+                </h:form>-->
             </article>
         </section>
         <aside class="sidebar">
@@ -47,9 +48,9 @@
                 <li>
                     <h4>Pages</h4>
                     <ul>
-                        <li><a href="#">Home Page</a></li>
-                        <li><a href="#">Hello World!</a></li>
-                        <li><a href="#">Basic CRUD Example</a></li>
+                        <li><h:link value="Home Page" outcome="index"/></li>
+                        <li><h:link value="Hello World!" outcome="hello"/></li>
+                        <li><h:link value="Basic CRUD Example" outcome="userList"/></li>
                     </ul>
                 </li>
 
@@ -62,16 +63,16 @@
         <div class="footer-content width">
             <ul>
                 <li><h4>Pages</h4></li>
-                <li><a href="#">Home Page</a></li>
-                <li><a href="#">Hello World!</a></li>
-                <li><a href="#">Basic CRUD Example</a></li>
+                <li><h:link value="Home Page" outcome="index"/></li>
+                <li><h:link value="Hello World!" outcome="hello"/></li>
+                <li><h:link value="Basic CRUD Example" outcome="userList"/></li>
             </ul>
 
             <ul>
-                <li><h4>Test Sites</h4></li>
-                <li><a href="#">Angular JS & REST API</a></li>
+                <li><h4>Test Applications</h4></li>
+                <li><a href="#">Angular JS &#38; REST API</a></li>
                 <li><a href="#">Wicket 6</a></li>
-                <li><a href="#">JSF 2</a></li>
+                <li><a href="#">Struts 2</a></li>
             </ul>
 
             <ul class="endfooter">
@@ -86,7 +87,7 @@
             <div class="clear"></div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; MyPiTech 2014 - <a href="http://zypopwebtemplates.com/" target="_blank">Free CSS Website Templates</a> by ZyPOP</p>
+            <p>&#169; MyPiTech 2014 - <a href="http://zypopwebtemplates.com/" target="_blank">Free CSS Website Templates</a> by ZyPOP</p>
         </div>
     </footer>
 </div>
