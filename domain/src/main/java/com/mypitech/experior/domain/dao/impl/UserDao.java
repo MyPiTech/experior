@@ -5,6 +5,8 @@ import com.mypitech.experior.domain.dao.IUserDao;
 import com.mypitech.experior.domain.entity.UserEntity;
 
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
@@ -16,15 +18,10 @@ import java.util.List;
  * Created by Shawn Wheeler on 9/18/2014.
  */
 @Stateless
+@TransactionAttribute(TransactionAttributeType.REQUIRED)
 public class UserDao implements IUserDao {
     @PersistenceContext(unitName = "experior")
     private EntityManager entityManager;
-
-    /*@Inject
-    private GenericMapper mapper;*/
-
-    //@Inject
-    //private UserEntityMapper userEntityMapper;
 
     @Override
     public UserBean read(String identity) {
@@ -34,10 +31,10 @@ public class UserDao implements IUserDao {
         returnBean.setName(entity.getName());
         returnBean.setDescription(entity.getDescription());
         return returnBean;
-        //return mapper.map(entityManager.find(UserEntity.class, identity), UserBean.class);
     }
 
     @Override
+    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public String create(UserBean user) {
         UserEntity entity = new UserEntity();
         entity.setName(user.getName());
@@ -47,12 +44,11 @@ public class UserDao implements IUserDao {
     }
 
     @Override
+    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public void update(String identity, UserBean user) {
         UserEntity existing = entityManager.find(UserEntity.class, identity);
         existing.setName(user.getName());
         existing.setDescription(user.getDescription());
-        //UserEntity updated = mapper.map(user, UserEntity.class);
-        //userEntityMapper.map(updated, existing);
         entityManager.persist(existing);
     }
 
@@ -73,6 +69,5 @@ public class UserDao implements IUserDao {
             returnList.add(userBean);
         }
         return returnList;
-        //return mapper.mapAsList(entityManager.createNamedQuery(GET_ALL,UserEntity.class).getResultList(), UserBean.class);
     }
 }

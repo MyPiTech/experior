@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by Shawn Wheeler on 9/13/2014.
  */
 @NamedQueries({
-        @NamedQuery(name = "UserEntity.all", query = "SELECT ue FROM UserEntity ue")
+        @NamedQuery(name = "UserEntity.all", query = "SELECT ue FROM UserEntity ue ORDER BY ue.name")
 })
 @Entity
 @Table(name = "test_user", schema = "data")
