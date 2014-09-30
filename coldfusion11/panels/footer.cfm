@@ -20,12 +20,12 @@
 
         <ul class="endfooter">
             <li><h4>Code Repositories</h4></li>
+            <li><a href="https://github.com/MyPiTech/experior/tree/master/angularjs" target="_blank">Angular JS</a></li>
+            <li><a href="https://github.com/MyPiTech/experior/tree/master/coldfusion11" target="_blank">ColdFusion 11</a></li>
+            <li><a href="https://github.com/MyPiTech/experior/tree/master/jsf2" target="_blank">JSF 2</a></li>
+            <li><a href="https://github.com/MyPiTech/experior/tree/master/rest_api" target="_blank">REST API</a></li>
             <li><a href="https://github.com/MyPiTech/experior/tree/master/struts2" target="_blank">Struts 2</a></li>
-            <li><a href="">Angular JS</a></li>
-            <li><a href="">REST API</a></li>
-            <li><a href="">Wicket 6</a></li>
-            <li><a href="">JSF 2</a></li>
-            <li><a href="">ColdFusion</a></li>
+            <li><a href="https://github.com/MyPiTech/experior/tree/master/wicket6" target="_blank">Wicket 6</a></li>
         </ul>
 
         <div class="clear"></div>

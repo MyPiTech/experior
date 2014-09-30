@@ -26,18 +26,23 @@
             <cfif structKeyExists(URL, "action") and URL.Action eq "delete">
                 <cfquery name="users" datasource="#Request["DSN"]#">
                        DELETE FROM experior.test_user WHERE identity =
-                       <cfqueryparam value="#URL.identity#" cfsqltype="CF_SQL_VARCHAR" maxlength="36">
+                       <cfqueryparam value="#URL.identity#" cfsqltype="CF_SQL_BIGINT" maxlength="36">
                 </cfquery>
             <cfelseif structKeyExists(URL, "action") and URL.Action eq "update">
                 <cfquery datasource="#Request["DSN"]#">
                        UPDATE experior.test_user
-                       SET name = '#Form.name#', description = '#Form.description#'
+                       SET name = <cfqueryparam value="#Form.name#" cfsqltype="CF_SQL_VARCHAR" maxlength="45">,
+                       description = <cfqueryparam value="#Form.description#" cfsqltype="CF_SQL_VARCHAR" maxlength="100">
                        WHERE identity =
-                       <cfqueryparam value="#URL.identity#" cfsqltype="CF_SQL_VARCHAR" maxlength="36">
+                       <cfqueryparam value="#URL.identity#" cfsqltype="CF_SQL_BIGINT" maxlength="36">
                 </cfquery>
+
             <cfelseif structKeyExists(URL, "action") and URL.Action eq "create">
                 <cfquery datasource="#Request["DSN"]#">
-                       INSERT INTO experior.test_user (name, description) VALUES ('#Form.name#', '#Form.description#')
+                       INSERT INTO experior.test_user (name, description) VALUES (
+                       <cfqueryparam value="#Form.name#" cfsqltype="CF_SQL_VARCHAR" maxlength="45">,
+                       <cfqueryparam value="#Form.description#" cfsqltype="CF_SQL_VARCHAR" maxlength="100">
+                       )
                 </cfquery>
             </cfif>
             <cfquery name="users" datasource="#Request["DSN"]#">
