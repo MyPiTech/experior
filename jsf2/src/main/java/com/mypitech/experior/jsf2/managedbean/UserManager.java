@@ -96,12 +96,12 @@ public class UserManager implements Serializable {
             userService.update(currentUser.getIdentity(), currentUser);
         }
 
-        return "userList";
+        return "userlist";
     }
 
     public String deleteUser(String identity){
         userService.delete(identity);
-        return "userList";
+        return "userlist";
     }
 
     public String newUser(){
@@ -111,7 +111,7 @@ public class UserManager implements Serializable {
         setIdentity("");
         setHeaderText("Create User");
         setButtonText("Create");
-        return "userForm";
+        return "userform";
     }
 
     public String updateUser(String identity){
@@ -121,6 +121,6 @@ public class UserManager implements Serializable {
         setName(currentUser.getName());
         setDescription(currentUser.getDescription());
         isNew = false;
-        return "userForm";
+        return "userform";
     }
 }
