@@ -4,8 +4,8 @@
 (
     function(){
         var app = angular.module('services', []);
-        var baseUrl = "http://localhost:8080/rest-api/user";
-        //var baseUrl = "http://www.mypitech.com:8080/rest-api/user";
+        //var baseUrl = "http://localhost:8080/rest-api/user";
+        var baseUrl = "http://www.mypitech.com:8080/rest-api/user";
         app.service(
             "userService",
             function($http, $q){
