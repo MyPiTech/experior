@@ -4,7 +4,6 @@
 (
     function(){
         var app = angular.module('services', []);
-        var baseUrl;
         app.service(
             "userService",
             function($http, $q){
@@ -18,7 +17,7 @@
                 function deleteUser(id){
                     var request = $http({
                         method: "delete",
-                        url: "http://localhost:8080/rest-api/user/delete",
+                        url: "http://www.mypitech.com:8080/rest-api/user/delete",
                         params: {
                             identity: id
                         }
@@ -29,7 +28,7 @@
                 function getUsers(){
                     var request = $http({
                         method: "get",
-                        url: "http://localhost:8080/rest-api/user/all"
+                        url: "http://www.mypitech.com:8080/rest-api/user/all"
                     });
                     return( request.then( handleSuccess, handleError ) );
                 }
@@ -37,7 +36,7 @@
                 function createUser(user){
                     var request = $http({
                         method: "post",
-                        url: "http://localhost:8080/rest-api/user/create",
+                        url: "http://www.mypitech.com:8080/rest-api/user/create",
                         data: user
                     });
                     return( request.then( handleSuccess, handleError ) );
@@ -46,7 +45,7 @@
                 function updateUser(user){
                     var request = $http({
                         method: "put",
-                        url: "http://localhost:8080/rest-api/user/update",
+                        url: "http://www.mypitech.com:8080/rest-api/user/update",
                         params: {
                             identity: user.id
                         },
