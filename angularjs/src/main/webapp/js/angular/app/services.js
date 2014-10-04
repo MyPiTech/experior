@@ -4,7 +4,8 @@
 (
     function(){
         var app = angular.module('services', []);
-        var baseUrl;
+        var baseUrl = "http://localhost:8080/rest-api/user";
+        //var baseUrl = "http://www.mypitech.com:8080/rest-api/user";
         app.service(
             "userService",
             function($http, $q){
@@ -18,7 +19,7 @@
                 function deleteUser(id){
                     var request = $http({
                         method: "delete",
-                        url: "http://localhost:8080/rest-api/user/delete",
+                        url: baseUrl + "/delete",
                         params: {
                             identity: id
                         }
@@ -29,7 +30,7 @@
                 function getUsers(){
                     var request = $http({
                         method: "get",
-                        url: "http://localhost:8080/rest-api/user/all"
+                        url: baseUrl + "/all"
                     });
                     return( request.then( handleSuccess, handleError ) );
                 }
@@ -37,7 +38,7 @@
                 function createUser(user){
                     var request = $http({
                         method: "post",
-                        url: "http://localhost:8080/rest-api/user/create",
+                        url: baseUrl + "/create",
                         data: user
                     });
                     return( request.then( handleSuccess, handleError ) );
@@ -46,9 +47,9 @@
                 function updateUser(user){
                     var request = $http({
                         method: "put",
-                        url: "http://localhost:8080/rest-api/user/update",
+                        url: baseUrl + "/update",
                         params: {
-                            identity: user.id
+                            identity: user.identity
                         },
                         data: user
                     });
