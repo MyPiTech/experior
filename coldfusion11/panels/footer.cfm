@@ -12,10 +12,10 @@
 
         <ul>
             <li><h4>Test Applications</h4></li>
-            <li><a href="">Angular JS & REST API</a></li>
-            <li><a href="">Wicket 6</a></li>
-            <li><a href="">JSF 2</a></li>
-            <li><a href="">Struts 2</a></li>
+            <li><a href="http://www.mypitech.com:8080/angularjs/" target="_blank">Angular JS &#38; REST API</a></li>
+            <li><a href="http://www.mypitech.com:8080/jsf2/" target="_blank">JSF 2</a></li>
+            <li><a href="http://www.mypitech.com:8080/struts2/" target="_blank">Struts 2</a></li>
+            <li><a href="http://www.mypitech.com:8080/wicket6/" target="_blank">Wicket 6</a></li>
         </ul>
 
         <ul class="endfooter">
