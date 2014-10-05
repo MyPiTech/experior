@@ -10,6 +10,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
  */
 public class Template extends WebPage {
     public static final String CONTENT_ID = "content";
+    public String currentPage = "test";
     private Component header;
     private Component menu;
     private Component footer;
@@ -42,6 +43,7 @@ public class Template extends WebPage {
         add(footer = new Footer("footer"));
         add(topNav = new TopNav("topNav"));
         add(new Label(CONTENT_ID, "Put your content here"));
+
     }
 
     public Component getHeader() {

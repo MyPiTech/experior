@@ -8,7 +8,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 /**
  * Created by Shawn Wheeler on 10/1/2014.
  */
-public class Home extends Template {
+public class Hello extends Template {
     /**
      * Constructor which receives wrapped query string parameters for a request. Having this
      * constructor public means that your page is 'bookmarkable' and hence can be called/ created
@@ -23,7 +23,7 @@ public class Home extends Template {
      *
      * @param parameters Wrapped query string parameters.
      */
-    public Home(PageParameters parameters) {
+    public Hello(PageParameters parameters) {
         super(parameters);
         replace(new HomePanel(CONTENT_ID));
         TopNav topNav = (TopNav) getTopNav();
