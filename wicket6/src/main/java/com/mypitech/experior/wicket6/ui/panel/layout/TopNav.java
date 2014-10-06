@@ -1,9 +1,13 @@
 package com.mypitech.experior.wicket6.ui.panel.layout;
 
+import com.mypitech.experior.wicket6.ui.page.Crud;
+import com.mypitech.experior.wicket6.ui.page.Hello;
+import com.mypitech.experior.wicket6.ui.page.Home;
 import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * Created by Shawn Wheeler on 10/1/2014.
@@ -24,43 +28,30 @@ public class TopNav extends Panel {
 
     private void addComponents() {
 
+
         add(homeItem);
         add(helloItem);
         add(crudItem);
 
-        /*if(currentPage == "home"){
-            homeItem.add(AttributeModifier.replace("class", "start selected"));
-            helloItem.add(AttributeModifier.replace("class", ""));
-            crudItem.add(AttributeModifier.replace("class", "end"));
-        } else if (currentPage == "hello"){
-            homeItem.add(AttributeModifier.replace("class", "start"));
-            helloItem.add(AttributeModifier.replace("class", "selected"));
-            crudItem.add(AttributeModifier.replace("class", "end"));
-        }else{
-            homeItem.add(AttributeModifier.replace("class", "start"));
-            helloItem.add(AttributeModifier.replace("class", ""));
-            crudItem.add(AttributeModifier.replace("class", "end selected"));
-        };*/
-
         homeItem.add(new Link<Void>("homeLink") {
             @Override
             public void onClick() {
-
-                //setResponsePage(new ClientEditPage(pageParameters, breadCrumbModel));
+                PageParameters pageParameters = new PageParameters();
+                setResponsePage(new Home(pageParameters));
             }
         });
         helloItem.add(new Link<Void>("helloLink") {
             @Override
             public void onClick() {
-
-                //setResponsePage(new ClientEditPage(pageParameters, breadCrumbModel));
+                PageParameters pageParameters = new PageParameters();
+                setResponsePage(new Hello(pageParameters));
             }
         });
         crudItem.add(new Link<Void>("crudLink") {
             @Override
             public void onClick() {
-
-                //setResponsePage(new ClientEditPage(pageParameters, breadCrumbModel));
+                PageParameters pageParameters = new PageParameters();
+                setResponsePage(new Crud(pageParameters));
             }
         });
 

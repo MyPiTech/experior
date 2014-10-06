@@ -1,6 +1,6 @@
 package com.mypitech.experior.wicket6.ui.page;
 
-import com.mypitech.experior.wicket6.ui.panel.HelloPanel;
+import com.mypitech.experior.wicket6.ui.panel.HelloConfirmPanel;
 import com.mypitech.experior.wicket6.ui.panel.layout.Template;
 import com.mypitech.experior.wicket6.ui.panel.layout.TopNav;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -8,7 +8,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 /**
  * Created by Shawn Wheeler on 10/1/2014.
  */
-public class Hello extends Template {
+public class HelloConfirm extends Template {
     /**
      * Constructor which receives wrapped query string parameters for a request. Having this
      * constructor public means that your page is 'bookmarkable' and hence can be called/ created
@@ -23,9 +23,9 @@ public class Hello extends Template {
      *
      * @param parameters Wrapped query string parameters.
      */
-    public Hello(PageParameters parameters) {
+    public HelloConfirm(PageParameters parameters, String name) {
         super(parameters);
-        replace(new HelloPanel(CONTENT_ID));
+        replace(new HelloConfirmPanel(CONTENT_ID, name));
         TopNav topNav = (TopNav) getTopNav();
         topNav.setHelloItemActive();
     }
