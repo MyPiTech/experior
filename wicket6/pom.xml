@@ -27,6 +27,17 @@
             <artifactId>wicket-extensions</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-cdi</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.wicketstuff</groupId>
+            <artifactId>wicketstuff-javaee-inject</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
         <!-- Local -->
         <dependency>
             <groupId>com.mypitech.experior</groupId>

@@ -17,7 +17,8 @@ import java.util.List;
 /**
  * Created by Shawn Wheeler on 9/18/2014.
  */
-@Stateless
+@Stateless(name="env/com.mypitech.experior.dao.IUserDao")
+//@Stateless
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
 public class UserDao implements IUserDao {
     @PersistenceContext(unitName = "experior")
