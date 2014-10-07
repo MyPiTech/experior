@@ -5,7 +5,6 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * Created by Shawn Wheeler on 10/1/2014.
@@ -23,8 +22,7 @@ public class HelloConfirmPanel extends Panel {
         add(new Link<Void>("helloLink") {
             @Override
             public void onClick() {
-                PageParameters pageParameters = new PageParameters();
-                setResponsePage(new Hello(pageParameters));
+                setResponsePage(new Hello());
             }
         });
     }

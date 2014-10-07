@@ -1,6 +1,5 @@
 package com.mypitech.experior.wicket6.ui.panel;
 
-import com.mypitech.experior.wicket6.ui.module.UserModel;
 import org.apache.wicket.markup.html.panel.Panel;
 
 /**
@@ -15,7 +14,7 @@ public class CrudPanel extends Panel {
      */
     public CrudPanel(String id) {
         super(id);
-        UserModel testModel = new UserModel();
+        //UserModel testModel = new UserModel();
         addComponents();
     }
 

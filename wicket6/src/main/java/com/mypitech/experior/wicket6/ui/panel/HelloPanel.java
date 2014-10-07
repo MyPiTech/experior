@@ -6,7 +6,6 @@ import org.apache.wicket.markup.html.form.StatelessForm;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * Created by Shawn Wheeler on 10/1/2014.
@@ -38,8 +37,7 @@ public class HelloPanel extends Panel {
 
         @Override
         public void onSubmit() {
-            PageParameters pageParameters = new PageParameters();
-            setResponsePage(new HelloConfirm(pageParameters, name));
+            setResponsePage(new HelloConfirm(name));
 
         }
     }

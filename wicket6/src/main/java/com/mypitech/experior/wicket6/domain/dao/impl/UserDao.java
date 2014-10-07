@@ -1,8 +1,9 @@
-package com.mypitech.experior.domain.dao.impl;
+package com.mypitech.experior.wicket6.domain.dao.impl;
 
-import com.mypitech.experior.domain.bean.UserBean;
-import com.mypitech.experior.domain.dao.IUserDao;
-import com.mypitech.experior.domain.entity.UserEntity;
+
+import com.mypitech.experior.wicket6.domain.bean.UserBean;
+import com.mypitech.experior.wicket6.domain.dao.IUserDao;
+import com.mypitech.experior.wicket6.domain.entity.UserEntity;
 
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
@@ -17,10 +18,11 @@ import java.util.List;
 /**
  * Created by Shawn Wheeler on 9/18/2014.
  */
-//@Stateless(name="env/com.mypitech.experior.dao.IUserDao")
+//@Stateless(name="java:module/com.mypitech.experior.wicket6.domain.dao.impl.UserDao")
 @Stateless
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
 public class UserDao implements IUserDao {
+
     @PersistenceContext(unitName = "experior")
     private EntityManager entityManager;
 
