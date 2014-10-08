@@ -2,7 +2,7 @@
  * Copyright (c) 2014. Shawn Wheeler. All rights reserved.
  */
 
-package com.mypitech.experior.wicket6.service;
+package com.mypitech.experior.wicket6.service.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,7 +28,7 @@ import java.util.List;
  * <p/>
  * Created by Shawn Wheeler on 5/21/2014.
  */
-public class HttpService {
+public class HttpUtil {
 
     public static <RequestBean> void put(URI URI, RequestBean requestBean) throws IOException {
         HttpPut httpPut = new HttpPut(URI);

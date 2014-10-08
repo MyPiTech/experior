@@ -1,6 +1,7 @@
 package com.mypitech.experior.wicket6.service;
 
 import com.mypitech.experior.domain.bean.UserBean;
+import com.mypitech.experior.wicket6.service.util.HttpUtil;
 import org.apache.http.client.utils.URIBuilder;
 
 import java.io.Serializable;
@@ -16,7 +17,7 @@ public class UserService implements Serializable{
     public List<UserBean> getAll(){
         List<UserBean> returnList = null;
         try {
-            returnList = HttpService.getList(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/all").build(), UserBean.class);
+            returnList = HttpUtil.getList(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/all").build(), UserBean.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -26,7 +27,7 @@ public class UserService implements Serializable{
     public UserBean read(String identity){
         UserBean user = null;
         try {
-            user = HttpService.get(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/read").addParameter("identity", identity).build(), UserBean.class);
+            user = HttpUtil.get(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/read").addParameter("identity", identity).build(), UserBean.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -35,7 +36,7 @@ public class UserService implements Serializable{
 
     public void create(UserBean user){
         try {
-            HashMap<String, String> resultMap = HttpService.post(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/create").build(), user);
+            HashMap<String, String> resultMap = HttpUtil.post(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/create").build(), user);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -43,7 +44,7 @@ public class UserService implements Serializable{
 
     public void update(String identity, UserBean user){
         try {
-            HttpService.put(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/update").addParameter("identity", identity).build(), user);
+            HttpUtil.put(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/update").addParameter("identity", identity).build(), user);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -51,7 +52,7 @@ public class UserService implements Serializable{
 
     public void delete(String identity){
         try {
-            HttpService.delete(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/delete").addParameter("identity", identity).build());
+            HttpUtil.delete(new URIBuilder(APPLICATION_DOMAIN).setPath("/rest-api/user/delete").addParameter("identity", identity).build());
         } catch (Exception e) {
             e.printStackTrace();
         }
