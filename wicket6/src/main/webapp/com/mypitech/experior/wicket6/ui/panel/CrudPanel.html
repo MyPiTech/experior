@@ -9,7 +9,7 @@
             <article>
                 <div>
                     <h2>User List</h2>
-                    <a class="button" style="margin-top:10px;" href="#">Create New User</a><br>
+                    <a class="button" style="margin-top:10px;" wicket:id="newUserLink">Create New User</a><br>
                     <table cellspacing="5px;" style="margin-top:20px;" id="userTable" cellpadding="5px;">
                         <thead>
                         <tr>
@@ -20,18 +20,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="user in users">
-                            <td>{{user.name}}</td>
-                            <td>{{user.description}}</td>
-                            <td><a href="#" ng-click="initUpdateForm(user); crudPageCtrl.setPage('2');">Update</a></td>
-                            <td><a href="#" ng-click="deleteUser(user)">Delete</a></td>
-                        </tr>
+                            <tr wicket:id="rows">
+                                <td wicket:id="textData"></td>
+                                <td><a wicket:id="updateLink">Update</a></td>
+                                <td><a wicket:id="deleteLink">Delete</a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-
             </article>
-            </div>
         </section>
     </wicket:panel>
 </body>

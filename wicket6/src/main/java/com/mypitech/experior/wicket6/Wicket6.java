@@ -10,6 +10,7 @@ import org.apache.wicket.protocol.http.WebApplication;
  */
 public class Wicket6 extends WebApplication {
 
+
     @Override
     public void init() {
         super.init();

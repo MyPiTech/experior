@@ -3,6 +3,7 @@ package com.mypitech.experior.wicket6.ui.panel.layout;
 import org.apache.wicket.Component;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * Created by Shawn Wheeler on 10/1/2014.
@@ -20,6 +21,10 @@ public class Template extends WebPage {
         addComponents();
     }
 
+    public Template(final PageParameters parameters) {
+        super(parameters);
+        addComponents();
+    }
 
 
     private void addComponents() {

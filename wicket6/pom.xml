@@ -27,58 +27,24 @@
             <artifactId>wicket-extensions</artifactId>
             <scope>compile</scope>
         </dependency>
+        <!-- HTTP -->
         <dependency>
-            <groupId>org.apache.wicket</groupId>
-            <artifactId>wicket-cdi</artifactId>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
             <scope>compile</scope>
         </dependency>
+        <!-- Jackson -->
         <dependency>
-            <groupId>org.wicketstuff</groupId>
-            <artifactId>wicketstuff-javaee-inject</artifactId>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- ORM  -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.uuid</groupId>
-            <artifactId>java-uuid-generator</artifactId>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- Mapping  -->
-        <dependency>
-            <groupId>ma.glasnost.orika</groupId>
-            <artifactId>orika-core</artifactId>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- Time -->
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
             <scope>compile</scope>
         </dependency>
         <!-- Local -->
-       <!-- <dependency>
+       <dependency>
             <groupId>com.mypitech.experior</groupId>
             <artifactId>domain</artifactId>
             <scope>compile</scope>
-        </dependency>-->
+        </dependency>
     </dependencies>
     <build>
         <finalName>wicket6</finalName>

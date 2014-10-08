@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+    <wicket:panel>
+        <section id="content">
+            <article>
+                <h2 wicket:id="editFormHeader">header</h2>
+                <a class="button" style="margin-bottom:20px;margin-top:10px;" wicket:id="returnLink">Return To User List</a><br>
+                <form wicket:id="userEditForm">
+                    <table>
+                        <tr>
+                            <td><label for="name" class="label">Name:</label></td>
+                            <td><input type="text" wicket:id="name" id="name" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="desc" class="label">Description:</label></td>
+                            <td><textarea wicket:id="description" cols="30" rows="3" id="desc"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div align="right">
+                                    <input type="submit" wicket:id="createSubmit" value="Create"/>
+                                    <input type="submit" wicket:id="updateSubmit" value="Update"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </article>
+        </section>
+    </wicket:panel>
+</body>
+</html>
+
+<!-- // Copyright (c) 2014 Shawn Wheeler All rights reserved.// -->
