@@ -16,7 +16,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Spring MVC 4/JSTL Simple Application</title>
+    <title>Spring MVC 4 Simple Application</title>
     <link rel="stylesheet" href="<c:url value="/resources/css/styles.css"/>" type="text/css" />
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,7 +27,7 @@
 <div id="container">
     <header>
         <div class="width">
-            <h1><a href="${home}">Spring MVC 4/JSTL Simple Application</a></h1>
+            <h1><a href="${home}">Spring MVC 4 Simple Application</a></h1>
         </div>
     </header>
     <nav>
@@ -43,7 +43,7 @@
         <section id="content">
             <article>
                 <h2>${headerText}</h2>
-                <a href="${crud}" class="button">Return To User List</a><br/>
+                <a href="${crud}" style="margin-bottom:20px;margin-top:10px;" class="button">Return To User List</a><br/>
                 <form:form commandName="userForm" method="POST">
                     <table>
                         <tr>
@@ -93,6 +93,7 @@
                 <li><a href="http://www.mypitech.com:8080/angularjs/" target="_blank">Angular JS &#38; REST API</a></li>
                 <li><a href="http://www.shawnsoft.com/cfSimpleApplication/" target="_blank">ColdFusion 11</a></li>
                 <li><a href="http://www.mypitech.com:8080/jsf2/" target="_blank">JSF 2</a></li>
+                <li><a href="http://www.mypitech.com:8080/struts2/" target="_blank">Struts 2</a></li>
                 <li><a href="http://www.mypitech.com:8080/wicket6/" target="_blank">Wicket 6</a></li>
             </ul>
 
@@ -102,6 +103,7 @@
                 <li><a href="https://github.com/MyPiTech/experior/tree/master/coldfusion11" target="_blank">ColdFusion 11</a></li>
                 <li><a href="https://github.com/MyPiTech/experior/tree/master/jsf2" target="_blank">JSF 2</a></li>
                 <li><a href="https://github.com/MyPiTech/experior/tree/master/rest_api" target="_blank">REST API</a></li>
+                <li><a href="https://github.com/MyPiTech/experior/tree/master/spring4" target="_blank">Spring MVC 4</a></li>
                 <li><a href="https://github.com/MyPiTech/experior/tree/master/struts2" target="_blank">Struts 2</a></li>
                 <li><a href="https://github.com/MyPiTech/experior/tree/master/wicket6" target="_blank">Wicket 6</a></li>
             </ul>
